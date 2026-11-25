@@ -1,4 +1,5 @@
 # main 브랜치에 올리면 site/ 폴더만 GitHub Pages로 배포한다.
+# 업로드(build)와 배포(deploy)를 다른 작업으로 나눈다 — 같은 작업 안에서는 방금 올린 묶음을 배포 단계가 못 찾는 경우가 있었다.
 name: Deploy site to GitHub Pages
 
 on:
@@ -13,19 +14,24 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v5
