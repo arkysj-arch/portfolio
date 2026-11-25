@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <!-- 주소 끝에 /가 없으면(…/portfolio) 상대 링크가 깨지므로 /를 붙여 다시 연다 -->
+  <script>if(!/\/$|\.html$/.test(location.pathname)){location.replace(location.pathname+'/'+location.search+location.hash);}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>윤성조 | AI 팀을 지휘해 이커머스·마케팅 성과를 만드는 총괄</title>
   <meta name="description" content="뷰티디바이스·화장품 이커머스 17년 실행 경험 위에, AI에게 일을 정의해 시키고 검수하는 방식으로 일합니다.">
