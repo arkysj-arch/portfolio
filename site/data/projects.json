@@ -1,0 +1,42 @@
+[
+  {
+    "id": "influencer",
+    "title": "인플루언서 제안 자동화",
+    "summary": "팔로워 수 대신 '구매 문의 댓글 비율'로 후보 선별부터 제안·출고까지 자동화",
+    "badge": "프로토타입",
+    "link": "cases/influencer/",
+    "ready": true
+  },
+  {
+    "id": "sj-proof",
+    "title": "SJ 프루프",
+    "summary": "받지 않은 사실은 쓰지 않고 설득 장치 16종으로 조립하는 AI 상세페이지 제작기",
+    "badge": "프로토타입",
+    "link": "cases/sj-proof/",
+    "ready": true
+  },
+  {
+    "id": "sj-rank",
+    "title": "SJ RANK",
+    "summary": "진단에서 끝내지 않고 90일 실행 플랜까지 제시하는 B2B SEO 진단·실행 대시보드",
+    "badge": "프로토타입",
+    "link": "cases/sj-rank/",
+    "ready": true
+  },
+  {
+    "id": "shortform",
+    "title": "숏폼 영상 생성기",
+    "summary": "원작을 베끼지 않고 컷·자막·사운드 구조만 학습해 A/B 테스트 소재를 제작하는 생성기",
+    "badge": "프로토타입",
+    "link": "cases/shortform/",
+    "ready": true
+  },
+  {
+    "id": "orchestration",
+    "title": "오케스트레이션",
+    "summary": "Claude 지휘와 Gemini 제작으로 이 포트폴리오 웹사이트를 구축한 AI 협업 방식",
+    "badge": "프로토타입",
+    "link": "cases/orchestration/",
+    "ready": true
+  }
+]

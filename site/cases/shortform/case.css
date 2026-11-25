@@ -1,0 +1,316 @@
+/* ==========================================================================
+   숏폼 케이스 전용 스타일 (site/cases/shortform/case.css)
+   SPEC 4항 및 GEMINI.md 디자인 규칙 준수
+   ========================================================================== */
+
+/* 안내 상자 */
+.case-notice-box {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.notice-badge {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.notice-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 2단: 원칙 3개 카드 그리드 */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.principle-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.principle-num {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.principle-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.45;
+}
+
+.principle-desc {
+  font-size: 0.925rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 2단: 만들면서 내린 판단 */
+.decisions-wrap {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.subsection-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.decision-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.decision-item {
+  font-size: 0.975rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.decision-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.decision-item strong {
+  color: var(--color-text);
+}
+
+/* 3단: 역할 표 */
+.role-table-wrap {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.role-table-container {
+  margin-top: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-card-bg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.role-table th,
+.role-table td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.role-table tr:last-child td {
+  border-bottom: none;
+}
+
+.role-table th {
+  background-color: var(--color-bg);
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+.font-bold {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* 4단: 실측 숫자 타일 */
+.stage-card .result-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.stage-card .result-stat-box {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-card .result-stat-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.stage-card .result-stat-label {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+
+/* 4단: 한계 */
+.limits-wrap {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.limits-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.limits-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.limits-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+/* 5단: 세로 영상 플레이어 */
+.video-player-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem auto 0;
+  max-width: 360px;
+  width: 100%;
+}
+
+.shortform-video {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background-color: #000000;
+  display: block;
+}
+
+.video-caption {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* 5단: 버튼 그룹 */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* 모바일 및 반응형 (375px, 640px, 900px) */
+@media (max-width: 900px) {
+  .stage-card .result-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .case-notice-box {
+    padding: 1rem 1.15rem;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .role-table th,
+  .role-table td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.875rem;
+  }
+
+  .stage-card .result-stats {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .stage-card .result-stat-num {
+    font-size: 1.5rem;
+  }
+
+  .video-player-wrap {
+    max-width: 100%;
+  }
+
+  .shortform-video {
+    max-width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+}

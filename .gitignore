@@ -1,0 +1,7 @@
+# 작업용 임시 파일 (녹화 프레임, 캡처 원본)
+.scratch/
+# 제작 AI 실행 로그 (PC 경로가 들어 있음)
+reports/*.log
+# 개인 설정
+.claude/settings.local.json
+__pycache__/
