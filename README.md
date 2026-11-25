@@ -1,6 +1,6 @@
 # 윤성조 포트폴리오
 
-**사이트:** https://seongjoyoun.github.io/portfolio/
+**사이트:** https://seongjoyoun-portfolio.vercel.app/ (예비: https://seongjoyoun.github.io/portfolio/ — 일부 통신망에서 github.io가 막힘)
 
 AI 팀을 지휘해 이커머스·마케팅 성과를 만드는 총괄의 포트폴리오입니다. 이 사이트는 다음처럼 역할을 나눠서 만들었습니다.
 

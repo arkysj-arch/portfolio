@@ -2,7 +2,9 @@
 # 다시 실행해도 같은 결과가 나오도록(중복 삽입 없이) 만든다.
 import html as H, pathlib, re, sys
 sys.stdout.reconfigure(encoding="utf-8")
-BASE = "https://seongjoyoun.github.io/portfolio"
+BASE = "https://seongjoyoun-portfolio.vercel.app"
+# 예전 대표 주소(교체 대상). GitHub Pages는 일부 망에서 막혀 예비 주소로만 둔다
+OLD_BASES = ["https://seongjoyoun.github.io/portfolio"]
 SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 
 pages = [SITE / "index.html"] + sorted((SITE / "cases").glob("*/index.html")) + sorted((SITE / "demos").glob("*/index.html"))
@@ -30,11 +32,13 @@ for p in pages:
 
 p404 = SITE / "404.html"
 t = p404.read_text(encoding="utf-8")
-t2 = re.sub(r'href="(\./|https://seongjoyoun\.github\.io/portfolio/)"', f'href="{BASE}/"', t)
+t2 = re.sub(r'href="(\./|https://[^"]+/)"(?=[^>]*>\s*메인)', f'href="{BASE}/"', t)
+for ob in OLD_BASES: t2 = t2.replace(f'href="{ob}/"', f'href="{BASE}/"')
 p404.write_text(t2, encoding="utf-8")
 print("404 links updated:", t2.count(f'href="{BASE}/"'))
 
 pp = SITE / "print" / "portfolio.html"
 t = pp.read_text(encoding="utf-8").replace("[사이트 주소]", BASE.replace("https://", ""))
+for ob in OLD_BASES: t = t.replace(ob.replace("https://", ""), BASE.replace("https://", ""))
 pp.write_text(t, encoding="utf-8")
-print("print page address filled:", t.count("seongjoyoun.github.io"))
+print("print page address filled:", t.count(BASE.replace("https://", "")))
