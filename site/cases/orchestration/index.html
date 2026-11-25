@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오케스트레이션 | 케이스 스터디</title>
+  <meta name="description" content="Claude 지휘와 Gemini 제작으로 이 포트폴리오 웹사이트를 구축한 AI 협업 방식">
+  <meta name="theme-color" content="#F7F4EE">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="case.css">
+
+  <!-- og:start -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="윤성조 포트폴리오">
+  <meta property="og:title" content="오케스트레이션 | 케이스 스터디">
+  <meta property="og:description" content="Claude 지휘와 Gemini 제작으로 이 포트폴리오 웹사이트를 구축한 AI 협업 방식">
+  <meta property="og:url" content="https://seongjoyoun.github.io/portfolio/cases/orchestration/">
+  <meta property="og:image" content="https://seongjoyoun.github.io/portfolio/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- og:end -->
+</head>
+<body>
+
+  <!-- 공통 헤더 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../" class="site-logo">윤성조</a>
+      <nav class="site-nav">
+        <a href="../../#projects">프로젝트 목록</a>
+        <a href="../../#career">경력</a>
+        <a href="../../#contact">연락</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-page">
+    <div class="container">
+
+      <!-- 브레드크럼 -->
+      <nav class="breadcrumb" aria-label="경로">
+        <a href="../../">홈</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../../#projects">케이스</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>오케스트레이션</span>
+      </nav>
+
+      <!-- 케이스 헤더 -->
+      <header class="case-header">
+        <div class="case-meta">
+          <span class="badge badge-record">기록</span>
+          <span class="hero-tag" style="margin-bottom: 0;">케이스 05</span>
+        </div>
+        <h1 class="case-title">오케스트레이션</h1>
+        <p class="case-lead">
+          Claude 지휘와 Gemini 제작으로 이 포트폴리오 웹사이트를 구축한 AI 협업 방식
+        </p>
+      </header>
+
+      <!-- 5단 고정 구조 (SPEC 3-1 & GEMINI.md) -->
+      <div class="case-stages">
+
+        <!-- 1단: 문제 -->
+        <section class="stage-card">
+          <div class="stage-label-wrap">
+            <span class="stage-number">01</span>
+            <span class="stage-badge">문제</span>
+          </div>
+          <h2 class="stage-title">AI에게 일을 시키면 빠르지만, 그대로 믿으면 틀린 숫자와 깨진 화면이 그대로 나간다</h2>
+          <div class="stage-content">
+            <p style="color: var(--color-muted); font-size: 0.95rem;">
+              제작 AI가 스스로 '모든 기준 통과'라고 보고하더라도, 실제로는 자료에 없는 인과나 확인되지 않은 숫자, 모바일 환경에서의 가로 넘침 같은 결함이 검증 없이 남아있을 수 있습니다.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2단: 판단 -->
+        <section class="stage-card">
+          <div class="stage-label-wrap">
+            <span class="stage-number">02</span>
+            <span class="stage-badge">판단</span>
+          </div>
+          <h2 class="stage-title">역할을 나눈다</h2>
+          <div class="stage-content">
+            <p>
+              오너, 지휘자, 제작자의 역할을 나눠, 만드는 쪽과 확인하는 쪽이 같지 않게 합니다.
+            </p>
+
+            <div class="roles-grid">
+              <div class="role-card">
+                <div class="role-header">
+                  <span class="role-title">나 (오너)</span>
+                </div>
+                <p class="role-desc">
+                  무엇을 만들지, 무엇을 공개할지 정한다. 질문에 답하고 스펙을 승인한다
+                </p>
+              </div>
+
+              <div class="role-card">
+                <div class="role-header">
+                  <span class="role-title">Claude (지휘)</span>
+                </div>
+                <p class="role-desc">
+                  질문으로 기획을 정리하고, 지시서를 쓰고, 결과를 직접 띄워 검수한다. 한두 줄은 직접 고친다
+                </p>
+              </div>
+
+              <div class="role-card">
+                <div class="role-header">
+                  <span class="role-title">Gemini (제작)</span>
+                </div>
+                <p class="role-desc">
+                  지시서 한 장 단위로 파일을 만들고 보고서를 쓴다. 파일 편집 권한만 있다
+                </p>
+              </div>
+            </div>
+
+            <div class="stage-principle-box">
+              <strong>핵심 원칙:</strong> 만든 AI가 스스로 '통과'라고 해도, 지휘자가 직접 띄워 재고 근거와 대조한다
+            </div>
+          </div>
+        </section>
+
+        <!-- 3단: AI에게 시킨 것 -->
+        <section class="stage-card">
+          <div class="stage-label-wrap">
+            <span class="stage-number">03</span>
+            <span class="stage-badge">AI에게 시킨 것</span>
+          </div>
+          <h2 class="stage-title">기획 정리부터 검수·수정까지 4단계 협업 흐름</h2>
+          <div class="stage-content">
+            <p>
+              오너 인터뷰를 통한 기획 정리부터 지시서 작성, 제작, 검수, 마일스톤 보고까지 4단계 파이프라인으로 진행합니다.
+            </p>
+
+            <div class="process-flow">
+              <div class="process-step-card">
+                <span class="process-step-badge">1단계</span>
+                <p class="process-step-text">질문으로 기획 정리 (5라운드, 30여 개 결정)</p>
+              </div>
+
+              <div class="process-step-card">
+                <span class="process-step-badge">2단계</span>
+                <p class="process-step-text">스펙·용어집·결정 기록 승인</p>
+              </div>
+
+              <div class="process-step-card">
+                <span class="process-step-badge">3단계</span>
+                <p class="process-step-text">지시서 → 제작 → 검수 → 수정 지시</p>
+              </div>
+
+              <div class="process-step-card">
+                <span class="process-step-badge">4단계</span>
+                <p class="process-step-text">마일스톤마다 보고</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4단: 결과 -->
+        <section class="stage-card">
+          <div class="stage-label-wrap">
+            <span class="stage-number">04</span>
+            <span class="stage-badge">결과</span>
+          </div>
+          <h2 class="stage-title">M1 마일스톤 성과 지표 및 검수·수정 실사례</h2>
+          <div class="stage-content">
+            <p>
+              작업 3개를 거치며 지휘자가 직접 브라우저로 띄워 검수하고 수정 지시를 전달했습니다. 실패와 수정 사실을 감추지 않고 협업 기록으로 보존합니다.
+            </p>
+
+            <!-- stats_m1 숫자 타일 4개 -->
+            <div class="stats-grid-4">
+              <div class="result-stat-box">
+                <div class="result-stat-num">3<span class="result-stat-unit">개</span></div>
+                <div class="result-stat-label">작업</div>
+              </div>
+
+              <div class="result-stat-box">
+                <div class="result-stat-num">5<span class="result-stat-unit">회</span></div>
+                <div class="result-stat-label">왕복</div>
+              </div>
+
+              <div class="result-stat-box">
+                <div class="result-stat-num">1<span class="result-stat-unit">개</span></div>
+                <div class="result-stat-label">한 번에 통과</div>
+              </div>
+
+              <div class="result-stat-box">
+                <div class="result-stat-num">4<span class="result-stat-unit">줄</span></div>
+                <div class="result-stat-label">지휘자가 직접 고친 줄</div>
+              </div>
+            </div>
+
+            <!-- cases 4개 펼침 카드 -->
+            <h3 class="cases-section-title">지휘자가 잡아낸 실제 검수 및 수정 사례 (4건)</h3>
+            <div class="trouble-cases-list">
+
+              <details class="trouble-case-card">
+                <summary class="trouble-case-summary">
+                  <div class="trouble-summary-left">
+                    <span class="trouble-case-task">T01 사이트 뼈대</span>
+                    <span class="trouble-case-title">근거 없는 문장 9건을 잡아냈다</span>
+                  </div>
+                  <span class="trouble-toggle-icon" aria-hidden="true">&#9662;</span>
+                </summary>
+                <div class="trouble-case-body">
+                  <div class="trouble-cols-grid">
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">무슨 일이 있었나</span>
+                      <p class="trouble-col-text">제작 보고서는 '모든 수치와 문장은 근거와 일치 ✅'였지만, 검수에서 자료에 없는 인과(&quot;공구 36억이 성장을 견인&quot;), 확인시킬 수 없는 숫자(&quot;검증된 도구 6종&quot;), 지어낸 설명 문단 등 9건이 나왔다</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">어떻게 지시했나</span>
+                      <p class="trouble-col-text">문장마다 '지금 → 이렇게'를 표로 적은 수정 지시서를 다시 보냈다</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">결과</span>
+                      <p class="trouble-col-text">2번째 결과에서 통과. 이후 모든 지시서에 '숫자·사실은 데이터 파일에서만 읽는다'를 넣었다</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details class="trouble-case-card">
+                <summary class="trouble-case-summary">
+                  <div class="trouble-summary-left">
+                    <span class="trouble-case-task">T02 체험형 데모</span>
+                    <span class="trouble-case-title">'가로 스크롤 없음 ✅'을 직접 재서 뒤집었다</span>
+                  </div>
+                  <span class="trouble-toggle-icon" aria-hidden="true">&#9662;</span>
+                </summary>
+                <div class="trouble-case-body">
+                  <div class="trouble-cols-grid">
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">무슨 일이 있었나</span>
+                      <p class="trouble-col-text">보고서는 반응형 통과였지만, 휴대폰 폭(375px)으로 띄워 재 보니 1·2단계 화면 폭이 529px로 넘쳤다. 원인은 후보 카드 3개가 한 줄에 고정된 것</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">어떻게 지시했나</span>
+                      <p class="trouble-col-text">넘치는 요소와 수치, 고칠 방법(640px 이하 한 줄에 1개), 확인 방법까지 적어 수정 지시</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">결과</span>
+                      <p class="trouble-col-text">375·768·1280px 모든 단계에서 넘침 0으로 통과</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details class="trouble-case-card">
+                <summary class="trouble-case-summary">
+                  <div class="trouble-summary-left">
+                    <span class="trouble-case-task">T02a 데모 데이터 (Claude 직접)</span>
+                    <span class="trouble-case-title">공개하면 안 되는 샘플 데이터를 먼저 걸렀다</span>
+                  </div>
+                  <span class="trouble-toggle-icon" aria-hidden="true">&#9662;</span>
+                </summary>
+                <div class="trouble-case-body">
+                  <div class="trouble-cols-grid">
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">무슨 일이 있었나</span>
+                      <p class="trouble-col-text">원 프로젝트의 '샘플' 데이터에 실제 도메인 이메일, 전화번호, 실존 건물 주소, 실존 경쟁 브랜드명이 들어 있었다</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">어떻게 지시했나</span>
+                      <p class="trouble-col-text">제작자에게 원본을 넘기지 않고, 구조만 남긴 가상 데이터 파일을 지휘자가 직접 만들어 넘겼다</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">결과</span>
+                      <p class="trouble-col-text">데모 화면에는 가상 값만 나오고, 이메일은 표시하지 않는다</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details class="trouble-case-card">
+                <summary class="trouble-case-summary">
+                  <div class="trouble-summary-left">
+                    <span class="trouble-case-task">작업 시작 직후</span>
+                    <span class="trouble-case-title">제작 도구가 막혀도 멈추지 않았다</span>
+                  </div>
+                  <span class="trouble-toggle-icon" aria-hidden="true">&#9662;</span>
+                </summary>
+                <div class="trouble-case-body">
+                  <div class="trouble-cols-grid">
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">무슨 일이 있었나</span>
+                      <p class="trouble-col-text">Gemini CLI가 개인 무료 계정 지원 종료로 로그인 실패. 다음엔 제작자가 폴더를 만들려고 명령을 실행하다 권한에 막혀 멈췄다</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">어떻게 지시했나</span>
+                      <p class="trouble-col-text">같은 계정의 Antigravity CLI로 바꾸고(Gemini 3.8 Flash, 파일 편집만 허용), 폴더는 지휘자가 미리 만들고 '명령 없이 파일만 쓰라'고 지시를 고쳤다</p>
+                    </div>
+                    <div class="trouble-col">
+                      <span class="trouble-col-header">결과</span>
+                      <p class="trouble-col-text">권한을 넓히지 않고 해결. 바꾼 이유는 결정 기록으로 남겼다</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- 5단: 직접 체험 -->
+        <section class="stage-card stage-demo-action">
+          <div class="stage-label-wrap">
+            <span class="stage-number">05</span>
+            <span class="stage-badge">직접 체험</span>
+          </div>
+          <h2 class="stage-title">이 사이트 자체가 결과물입니다</h2>
+          <div class="stage-content">
+            <p class="experience-lead">이 사이트 자체가 결과물입니다.</p>
+            <p class="experience-desc">
+              지금 보고 계신 이 웹사이트 전체가 위 방식으로 만들어졌습니다. 오너가 정하고, Claude가 지시하고 검수하고, Gemini가 만들었습니다.
+            </p>
+            <div class="experience-actions-group">
+              <a href="../../" class="btn btn-primary">
+                메인으로 이동 &rarr;
+              </a>
+              <a href="../influencer/" class="btn btn-secondary">
+                인플루언서 제안 자동화 케이스 &rarr;
+              </a>
+              <a href="../sj-rank/" class="btn btn-secondary">
+                SJ RANK 케이스 &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2026 윤성조.</div>
+      <div class="footer-contact">연락처: <strong><a href="mailto:ganziskin@gmail.com">ganziskin@gmail.com</a></strong></div>
+    </div>
+  </footer>
+
+</body>
+</html>

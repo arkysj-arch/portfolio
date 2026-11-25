@@ -1,0 +1,352 @@
+/* ==========================================================================
+   오케스트레이션 케이스 전용 스타일 (T05)
+   공통 style.css 뒤에 로드됨
+   ========================================================================== */
+
+/* 1. '기록' 배지 (포인트 색 테두리) */
+.badge-record {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+/* 2. 판단 섹션: 역할 카드 3개 & 원칙 배너 */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 1.75rem 0 1.5rem;
+}
+
+.role-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.role-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.role-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.role-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+  flex-grow: 1;
+}
+
+.stage-principle-box {
+  background-color: var(--color-bg);
+  border-left: 4px solid var(--color-accent);
+  border-top: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.stage-principle-box strong {
+  color: var(--color-accent);
+}
+
+/* 3. AI에게 시킨 것: 4단계 프로세스 흐름도 (데스크톱 가로, 모바일 세로) */
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.75rem;
+  position: relative;
+}
+
+.process-step-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.process-step-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.process-step-text {
+  font-size: 0.975rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* 4. 결과: 숫자 타일 4개 */
+.stats-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.stats-grid-4 .result-stat-box {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-grid-4 .result-stat-num {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.stats-grid-4 .result-stat-unit {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-left: 0.2rem;
+}
+
+.stats-grid-4 .result-stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* 4. 결과: 검수·수정 사례 펼침 카드 (<details><summary>) */
+.cases-section-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.trouble-cases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trouble-case-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trouble-case-card[open] {
+  background-color: var(--color-card-bg);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px rgba(20, 33, 61, 0.05);
+}
+
+.trouble-case-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  font-family: var(--font-family);
+  gap: 1rem;
+}
+
+.trouble-case-summary::-webkit-details-marker {
+  display: none;
+}
+
+.trouble-case-summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.trouble-summary-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1rem;
+}
+
+.trouble-case-task {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+  border: 1px solid var(--color-accent);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.trouble-case-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.trouble-toggle-icon {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.trouble-case-card[open] .trouble-toggle-icon {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+.trouble-case-body {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.trouble-cols-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.trouble-col {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.trouble-col-header {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.trouble-col-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 5. 직접 체험: 데모 대신 문장 및 링크 그룹 */
+.experience-lead {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.experience-desc {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+  margin-bottom: 1.75rem;
+}
+
+.experience-actions-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* 반응형 대응 (900px, 768px, 640px, 375px) */
+@media (max-width: 900px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .process-flow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stats-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .trouble-cols-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .process-flow {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .stats-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .trouble-case-summary {
+    padding: 1.15rem 1rem;
+  }
+
+  .trouble-case-body {
+    padding: 0 1rem 1.25rem;
+  }
+
+  .trouble-summary-left {
+    gap: 0.5rem;
+  }
+
+  .experience-actions-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .experience-actions-group .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}

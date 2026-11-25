@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJ 프루프 체험형 데모 | 윤성조</title>
+  <meta name="description" content="AI가 상세페이지를 빨리 만드는 것이 아니라, 받지 않은 사실을 지어내지 못하게 통제하고 검증하는 4단계 흐름을 확인해 보세요.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F7F4EE">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="demo.css">
+
+  <!-- og:start -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="윤성조 포트폴리오">
+  <meta property="og:title" content="SJ 프루프 체험형 데모 | 윤성조">
+  <meta property="og:description" content="AI가 상세페이지를 빨리 만드는 것이 아니라, 받지 않은 사실을 지어내지 못하게 통제하고 검증하는 4단계 흐름을 확인해 보세요.">
+  <meta property="og:url" content="https://seongjoyoun.github.io/portfolio/demos/sj-proof/">
+  <meta property="og:image" content="https://seongjoyoun.github.io/portfolio/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- og:end -->
+</head>
+<body>
+
+  <!-- 상단 비공식 샘플 안내 띠 -->
+  <aside class="demo-top-banner" aria-label="데모 안내">
+    <div class="container demo-top-banner-inner">
+      <span>메디큐브와 무관한 비공식 포트폴리오 샘플입니다. 공식몰 공개 정보(2026-11-25 확인)만으로 실제 실행한 결과를 재생합니다.</span>
+    </div>
+  </aside>
+
+  <!-- 공통 헤더 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../" class="site-logo">윤성조</a>
+      <nav class="site-nav" aria-label="사이트 메뉴">
+        <a href="../../cases/sj-proof/">케이스로 돌아가기</a>
+        <a href="../../">메인 홈</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 데모 메인 본문 -->
+  <main class="demo-page">
+    <div class="container">
+
+      <!-- 데모 인트로 -->
+      <header class="demo-intro">
+        <div class="demo-badge-wrap">
+          <span class="badge badge-prototype">체험형 데모</span>
+        </div>
+        <h1 class="demo-page-title">SJ 프루프 검증 프로세스</h1>
+        <p class="demo-page-lead">
+          AI가 상세페이지를 빨리 만드는 것이 아니라, 받지 않은 사실을 지어내지 못하게 통제하고 검증하는 4단계 흐름을 확인해 보세요.
+        </p>
+      </header>
+
+      <!-- 4단계 네비게이션 (1 입력·리서치 · 2 사실 목록 · 3 검사 · 4 완성 페이지) -->
+      <nav class="demo-stepper-nav" aria-label="데모 단계 네비게이션">
+        <ol class="demo-stepper-list">
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="1" id="step-tab-1" aria-current="step">
+              <span class="demo-step-num">1</span>
+              <span class="demo-step-name">입력·리서치</span>
+            </button>
+          </li>
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="2" id="step-tab-2">
+              <span class="demo-step-num">2</span>
+              <span class="demo-step-name">사실 목록</span>
+            </button>
+          </li>
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="3" id="step-tab-3">
+              <span class="demo-step-num">3</span>
+              <span class="demo-step-name">검사</span>
+            </button>
+          </li>
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="4" id="step-tab-4">
+              <span class="demo-step-num">4</span>
+              <span class="demo-step-name">완성 페이지</span>
+            </button>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- 로딩 및 에러 안내 컨테이너 -->
+      <div id="demo-status-container" role="status" aria-live="polite">
+        <div class="demo-status-banner">데모 데이터를 불러오는 중입니다...</div>
+      </div>
+
+      <!-- 단계별 화면 컨테이너 -->
+      <div id="demo-content-area" style="display: none;">
+
+        <!-- 1단계: 입력·리서치 -->
+        <section class="demo-step-view is-active" id="step-view-1" aria-labelledby="step-1-title">
+          <header class="step-header">
+            <div class="step-header-tag">1단계 · 입력·리서치</div>
+            <h2 class="step-header-title" id="step-1-title">공식몰 공개 자료 추출 및 결손 데이터 확인</h2>
+            <p class="step-header-desc">
+              공식몰에 실제로 공개된 제품 정보와 상세 이미지에서 문장과 각주를 추출하고, 없는 자료는 지어내지 않고 비워 둡니다.
+            </p>
+          </header>
+
+          <div class="input-info-grid" id="step-1-inputs">
+            <!-- JS 동적 렌더링: 제품명, 입력 사진, 리서치 방식 -->
+          </div>
+
+          <div class="not-available-box" id="step-1-not-available">
+            <!-- JS 동적 렌더링: 못 구한 자료 5개 목록 -->
+          </div>
+        </section>
+
+        <!-- 2단계: 사실 목록 -->
+        <section class="demo-step-view" id="step-view-2" aria-labelledby="step-2-title">
+          <header class="step-header">
+            <div class="step-header-tag">2단계 · 사실 목록</div>
+            <h2 class="step-header-title" id="step-2-title">출처 주소가 붙은 사실 문장과 합성 자료 0개 검증</h2>
+            <p class="step-header-desc">
+              모든 사실 문장에 공식몰 출처 주소를 명시하고, 출처가 없거나 지어낸 합성 자료는 0개로 유지합니다.
+            </p>
+          </header>
+
+          <div class="stat-tiles-row" id="step-2-stats">
+            <!-- JS 동적 렌더링: 총 사실 수, 출처 주소 보유 수, 합성 자료 수 -->
+          </div>
+
+          <div class="facts-grid" id="step-2-facts">
+            <!-- JS 동적 렌더링: 12개 사실 샘플 카드 -->
+          </div>
+        </section>
+
+        <!-- 3단계: 검사 -->
+        <section class="demo-step-view" id="step-view-3" aria-labelledby="step-3-title">
+          <header class="step-header">
+            <div class="step-header-tag">3단계 · 검사</div>
+            <h2 class="step-header-title" id="step-3-title">일부러 뺀 주장 8건과 안전 기준 자동 검증</h2>
+            <p class="step-header-desc">
+              공식몰에 적혀 있더라도 수치 조건이 불일치하거나 근거가 약한 표현은 일부러 제외하고, 8단계 퍼널과 망설임 해소 기준을 검사합니다.
+            </p>
+          </header>
+
+          <!-- 일부러 뺀 주장 8건 -->
+          <div class="excluded-wrapper">
+            <div class="section-subheading">
+              <span>일부러 뺀 주장 (8건)</span>
+              <span class="badge badge-prototype">근거 미흡·조건 불일치 배제</span>
+            </div>
+            <div class="excluded-grid" id="step-3-excluded">
+              <!-- JS 동적 렌더링: 취소선 문장 + 이유 -->
+            </div>
+          </div>
+
+          <!-- 검사 세부 결과 (퍼널 8칸 + 검사 지표) -->
+          <div class="check-analysis-card">
+            <div class="section-subheading">
+              <span>설득 구조 퍼널 8칸 충족 여부</span>
+              <span class="badge badge-prototype">8/8 충족</span>
+            </div>
+            <div class="funnel-grid" id="step-3-funnel">
+              <!-- JS 동적 렌더링: 8개 퍼널 칸 -->
+            </div>
+
+            <div class="check-metrics-grid" id="step-3-metrics">
+              <!-- JS 동적 렌더링: 망설임 질문 충족률, 함정 시험 통과, 오류 수 -->
+            </div>
+          </div>
+
+          <!-- 판매자에게 물을 것 (5개) -->
+          <div class="seller-questions-card">
+            <div class="section-subheading">
+              <span>판매자에게 물을 것 (5개)</span>
+              <span class="badge badge-prototype">추가 확인 요청 목록</span>
+            </div>
+            <ul class="seller-questions-list" id="step-3-seller-questions">
+              <!-- JS 동적 렌더링 -->
+            </ul>
+          </div>
+        </section>
+
+        <!-- 4단계: 완성 페이지 -->
+        <section class="demo-step-view" id="step-view-4" aria-labelledby="step-4-title">
+          <header class="step-header">
+            <div class="step-header-tag">4단계 · 완성 페이지</div>
+            <h2 class="step-header-title" id="step-4-title">검증 통과 요소로 조립된 상세페이지 실제 출력물</h2>
+            <p class="step-header-desc">
+              검사를 통과한 사실 문장과 공식몰 이미지만을 결합하여 생성한 860px 규격 최종 상세페이지 조각 19장입니다.
+            </p>
+          </header>
+
+          <div class="mockup-container">
+            <div class="mockup-spec-pill" id="step-4-dimensions">
+              <!-- JS 동적 렌더링: 860px × 29,448px 실제 출력물 -->
+            </div>
+
+            <!-- 휴대폰 모양 틀 (폭 최대 390px, 높이 70vh, 내부 세로 스크롤) -->
+            <div class="phone-mockup-frame" id="phone-mockup-frame" tabindex="0" aria-label="상세페이지 미리보기 휴대폰 화면">
+              <div class="slice-container" id="step-4-slices">
+                <!-- JS 동적 렌더링: 조각 이미지 19장 loading="lazy" display:block -->
+              </div>
+            </div>
+
+            <div class="mockup-footer-note">
+              틀 안을 스크롤하여 29,448px 높이의 전체 상세페이지 조립 결과를 확인하실 수 있습니다.
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /demo-content-area -->
+
+      <!-- 하단 네비게이션 컨트롤 -->
+      <footer class="demo-bottom-nav">
+        <div class="demo-nav-info" id="demo-nav-hint" role="status" aria-live="polite">
+          <!-- 단계 안내 문구 -->
+        </div>
+        <div class="demo-nav-btns">
+          <button type="button" class="btn btn-secondary" id="btn-prev" disabled>&larr; 이전 단계</button>
+          <button type="button" class="btn btn-primary" id="btn-next">다음 단계 &rarr;</button>
+          <button type="button" class="btn btn-secondary" id="btn-restart" style="display: none;">처음부터 다시 보기</button>
+          <a href="../../cases/sj-proof/" class="btn btn-primary" id="btn-case-return" style="display: none;">케이스로 돌아가기 &rarr;</a>
+        </div>
+      </footer>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2026 윤성조.</div>
+      <div class="footer-contact">연락처: <strong><a href="mailto:ganziskin@gmail.com">ganziskin@gmail.com</a></strong></div>
+    </div>
+  </footer>
+
+  <script src="demo.js" defer></script>
+</body>
+</html>

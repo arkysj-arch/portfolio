@@ -1,0 +1,322 @@
+{
+  "_source": "상세제작기/runs/medicube-booster-pro-x2/v1 (2026-11-25) facts.json·check.json·page-860.png, docs/portfolio-summary-medicube.md",
+  "notice": "메디큐브와 무관한 비공식 포트폴리오 샘플입니다. 공식몰 공개 정보(2026-11-25 확인)만으로 실제 실행한 결과를 재생합니다.",
+  "product": "메디큐브 에이지알 부스터 프로 X2",
+  "input": {
+    "photos": "모델 없는 공식몰 제품 사진 4장 (유명인·시연자 사진은 초상권 때문에 제외)",
+    "research": "공식몰 상품 페이지와 상세 이미지 55장에서 문장·각주를 옮겨 적음"
+  },
+  "facts_total": 78,
+  "facts_with_url": 78,
+  "facts_synthetic": 0,
+  "facts_sample": [
+    {
+      "id": "N1",
+      "kind": "notice",
+      "text": "에이지알 메디큐브 에이지알 부스터 프로 X2 / ME-BPXT , ME-BPXT-K",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705 (상품 정보 고시)"
+    },
+    {
+      "id": "N2",
+      "kind": "notice",
+      "text": "R-R-pg1-ME-BPXT",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705 (상품 정보 고시)"
+    },
+    {
+      "id": "B1",
+      "kind": "brand_page",
+      "text": "[에이지알] 부스터 프로 X2™ — 메디큐브 공식몰 상품명",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705"
+    },
+    {
+      "id": "B2",
+      "kind": "brand_page",
+      "text": "기존 대비 2배 강력해진 출력의 올인원 토탈 케어 디바이스",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705 (상품 요약)"
+    },
+    {
+      "id": "E12",
+      "kind": "evidence",
+      "text": "알레르기 안전인증 제품으로 지정",
+      "url": "https://themedicube.co.kr/web/product/detail/device/X2/260304_X2_05_04_1.webp"
+    },
+    {
+      "id": "E1",
+      "kind": "evidence",
+      "text": "부스터 X2 모드 피부 투과도 1,332%",
+      "url": "https://themedicube.co.kr/web/product/detail/device/X2/260304_X2_02_22_1.webp"
+    },
+    {
+      "id": "PH1",
+      "kind": "official_photo",
+      "text": "공식몰 상품 이미지: 부스터 프로 X2 핑크 본체, 마스크 모드 화면",
+      "url": "data/reference/medicube-booster-pro/SOURCES.md (p04_cover.jpg)"
+    },
+    {
+      "id": "PH2",
+      "kind": "official_photo",
+      "text": "공식몰 상품 이미지: 모드별 LED 색이 다른 헤드 6개",
+      "url": "data/reference/medicube-booster-pro/SOURCES.md (p05_modes.jpg)"
+    },
+    {
+      "id": "O1",
+      "kind": "price",
+      "text": "블프할인가 329,000원 (2026-11-25 공식몰 표시)",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705"
+    },
+    {
+      "id": "O2",
+      "kind": "price",
+      "text": "옵션: [블프 혜택] 부스터 프로 X2 핑크 + EGF NAD 앰플 / [블프 혜택] 부스터 프로 X2 화이트 + EGF NAD 앰플",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705"
+    },
+    {
+      "id": "G1",
+      "kind": "policy",
+      "text": "배송비 3,000원 (60,000원 이상 구매 시 무료). 평일 16시 이전 결제 시 당일 출고",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705"
+    },
+    {
+      "id": "G2",
+      "kind": "policy",
+      "text": "상품을 인도 받은 날로부터 15일 이내에 한해 계약에 관한 청약 철회가 가능합니다. 공급받으신 상품 및 용역의 내용이 표시.광고 내용과 다르거나 다르게 이행된 경우에는 공급받은 날로부터 3개월 이내 혹은 그 사실을 알 수 있었던 날부터 30일 이내 교환/반품이 가능합니다.",
+      "url": "https://themedicube.co.kr/product/detail.html?product_no=2705 (교환 및 반품 안내)"
+    }
+  ],
+  "not_available": [
+    "정가(할인 전 가격)",
+    "실제 후기 (공식몰 제품후기 0건)",
+    "사용상 주의사항 전문(매뉴얼)",
+    "품질보증기간",
+    "피부 타입별 사용 자료"
+  ],
+  "excluded": [
+    {
+      "text": "듀얼 모드 이중턱 탄력 3.21배 개선",
+      "reason": "같은 상세페이지 안에서 같은 시험(듀얼 C)이 3.21배와 3.2배로 다르게 표기됨. 어느 값이 맞는지 확인할 수 없음"
+    },
+    {
+      "text": "최대 흡수율 1332%",
+      "reason": "문구는 '흡수율', 각주는 '인체 피부조직 투과도 효력시험'. 각주 기준인 '투과도'로만 씀"
+    },
+    {
+      "text": "피부층 단면 그림 (진피층·근막층·속근육층까지 도달)",
+      "reason": "도달 깊이를 뒷받침하는 시험 각주가 없음. '이해를 돕기 위해 연출된 장면' 표기뿐"
+    },
+    {
+      "text": "최초 도입 / 최고의 프리미엄 / 최다 샷 수",
+      "reason": "최상급 표현. 근거가 '메디큐브 브랜드에 한함' 같은 자사 범위라 쓰지 않음"
+    },
+    {
+      "text": "멜라닌 색소량·깊은 라인 개선 수치",
+      "reason": "미백·주름 기능성 표현으로 읽힐 수 있어 기기 샘플에서 제외"
+    },
+    {
+      "text": "ASTM 기준 의료용 SUS 재질",
+      "reason": "'의료용' 표현이 의료기기 오인을 부를 수 있어 제외"
+    },
+    {
+      "text": "유명인 사용 소감 3건, 모델 사진",
+      "reason": "초상권·추천 광고 표시 문제"
+    },
+    {
+      "text": "2026 대한민국 대표 브랜드 대상 (MASTER BRAND 배지)",
+      "reason": "제품이 아닌 브랜드 수상. 부문·주관 각주가 작아 확인 어려움"
+    }
+  ],
+  "funnel": [
+    {
+      "key": "S1_hook",
+      "label": "시선 끌기",
+      "status": "있음"
+    },
+    {
+      "key": "S2_problem",
+      "label": "고민",
+      "status": "있음"
+    },
+    {
+      "key": "S3_cause",
+      "label": "원인",
+      "status": "있음"
+    },
+    {
+      "key": "S4_mechanism",
+      "label": "작동 원리",
+      "status": "있음"
+    },
+    {
+      "key": "S5_proof",
+      "label": "증거",
+      "status": "있음"
+    },
+    {
+      "key": "S6_objection",
+      "label": "망설임 해소",
+      "status": "있음"
+    },
+    {
+      "key": "S7_offer",
+      "label": "제안",
+      "status": "있음"
+    },
+    {
+      "key": "S8_assurance",
+      "label": "안심",
+      "status": "있음"
+    }
+  ],
+  "check": {
+    "errors": 0,
+    "claim_blocks": 76,
+    "hesitation": {
+      "answered": 12,
+      "scored": 13,
+      "mention_only": 1,
+      "excluded": 2,
+      "rate": "92%"
+    },
+    "trap_test": "10/10"
+  },
+  "seller_questions": [
+    "매뉴얼의 사용상 주의사항 전문(사용하면 안 되는 경우 포함)을 주세요.",
+    "임산부·금속 보형물·시술 직후 사용에 대한 공식 안내 문구가 있으면 주세요.",
+    "정가(할인 전 가격)와 할인 기간을 알려 주세요. 있으면 할인율을 계산해 넣습니다.",
+    "품질보증기간을 알려 주세요.",
+    "실제 구매 후기(별점·날짜·채널)를 주세요. 지금은 후기 섹션을 만들지 않았습니다."
+  ],
+  "compare": [
+    {
+      "label": "근거 번호가 달린 사실 문장",
+      "before": "60개",
+      "after": "76개"
+    },
+    {
+      "label": "구매 망설임 질문에 근거로 답한 비율",
+      "before": "82% (스킨케어 11문항)",
+      "after": "92% (디바이스 13문항)"
+    },
+    {
+      "label": "합성(가짜) 자료",
+      "before": "14개",
+      "after": "0개"
+    },
+    {
+      "label": "출처 주소가 붙은 사실",
+      "before": "0/67",
+      "after": "78/78"
+    },
+    {
+      "label": "근거가 약해 일부러 뺀 주장",
+      "before": "1건",
+      "after": "8건"
+    },
+    {
+      "label": "검사기 함정 시험",
+      "before": "7/7",
+      "after": "10/10"
+    }
+  ],
+  "compare_note": "이전 최고 결과(타사 스킨케어 제품 시험작 v5)와 비교. 두 제품은 카테고리가 달라 망설임 질문 목록이 다르다.",
+  "page": {
+    "width": 860,
+    "height": 29448,
+    "slices": [
+      {
+        "src": "assets/img/sj-proof/page-01.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-02.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-03.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-04.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-05.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-06.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-07.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-08.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-09.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-10.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-11.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-12.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-13.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-14.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-15.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-16.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-17.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-18.webp",
+        "w": 860,
+        "h": 1600
+      },
+      {
+        "src": "assets/img/sj-proof/page-19.webp",
+        "w": 860,
+        "h": 648
+      }
+    ]
+  }
+}

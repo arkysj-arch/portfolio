@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJ RANK 화면 둘러보기 데모 | 윤성조</title>
+  <meta name="description" content="실제 프로그램 화면 5장을 넘겨 보며 '진단에서 끝내지 않고 실행 순서까지 주는 도구'의 구성을 확인해 보세요.">
+  <meta name="theme-color" content="#F7F4EE">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="demo.css">
+
+  <!-- og:start -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="윤성조 포트폴리오">
+  <meta property="og:title" content="SJ RANK 화면 둘러보기 데모 | 윤성조">
+  <meta property="og:description" content="실제 프로그램 화면 5장을 넘겨 보며 &#x27;진단에서 끝내지 않고 실행 순서까지 주는 도구&#x27;의 구성을 확인해 보세요.">
+  <meta property="og:url" content="https://seongjoyoun.github.io/portfolio/demos/sj-rank/">
+  <meta property="og:image" content="https://seongjoyoun.github.io/portfolio/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- og:end -->
+</head>
+<body>
+
+  <!-- 상단 안내 띠 (JSON notice) -->
+  <aside class="demo-top-banner" id="demo-notice-bar" aria-label="데모 안내" style="display: none;">
+    <div class="container demo-top-banner-inner">
+      <div class="demo-top-banner-text" id="demo-notice-text">
+        <!-- JS 동적 렌더링: notice -->
+      </div>
+    </div>
+  </aside>
+
+  <!-- 공통 헤더 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../" class="site-logo">윤성조</a>
+      <nav class="site-nav" aria-label="사이트 메뉴">
+        <a href="../../cases/sj-rank/">케이스로 돌아가기</a>
+        <a href="../../">메인 홈</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 데모 메인 본문 -->
+  <main class="demo-page">
+    <div class="container">
+
+      <!-- 브레드크럼 -->
+      <nav class="breadcrumb" aria-label="경로">
+        <a href="../../">홈</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../../cases/sj-rank/">SJ RANK 케이스</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>화면 둘러보기</span>
+      </nav>
+
+      <!-- 데모 인트로 -->
+      <header class="demo-intro">
+        <div class="demo-badge-wrap">
+          <span class="badge badge-prototype">프로토타입 둘러보기</span>
+        </div>
+        <h1 class="demo-page-title">SJ RANK 프로그램 화면 둘러보기</h1>
+        <p class="demo-page-lead">
+          실제 프로그램 화면 5장을 넘겨 보며 '진단에서 끝내지 않고 실행 순서까지 주는 도구'의 구성을 확인해 보세요.
+        </p>
+      </header>
+
+      <!-- 로딩 및 에러 안내 컨테이너 -->
+      <div id="demo-status-container" role="status" aria-live="polite">
+        <div class="demo-status-banner">데모 데이터를 불러오는 중입니다...</div>
+      </div>
+
+      <!-- 메인 탭 뷰 영역 -->
+      <div id="demo-content-area" style="display: none;">
+        
+        <!-- 탭 네비게이션: 모바일 가로 스크롤 허용 -->
+        <div class="tabs-scroll-wrapper">
+          <div class="tabs-list" role="tablist" aria-label="SJ RANK 화면 탭 목록" id="tab-list">
+            <!-- JS 동적 렌더링: button role="tab" -->
+          </div>
+        </div>
+
+        <!-- 탭 패널 컨테이너 -->
+        <div class="tab-panel-container" id="tab-panel-container">
+          <!-- JS 동적 렌더링: div role="tabpanel" -->
+        </div>
+
+        <!-- 하단 돌아가기 버튼 영역 -->
+        <div class="demo-footer-action">
+          <a href="../../cases/sj-rank/" class="btn btn-secondary">
+            &larr; 케이스로 돌아가기
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2026 윤성조.</div>
+      <div class="footer-contact">연락처: <strong><a href="mailto:ganziskin@gmail.com">ganziskin@gmail.com</a></strong></div>
+    </div>
+  </footer>
+
+  <script src="demo.js"></script>
+</body>
+</html>

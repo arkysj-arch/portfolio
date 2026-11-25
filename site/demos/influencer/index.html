@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인플루언서 제안 자동화 체험형 데모 | 윤성조</title>
+  <meta name="description" content="버튼을 눌러 1단계부터 5단계까지 진행하며 AI 도구가 후보를 발굴하고 적격성을 판정하여 맞춤 제안을 생성하는 전체 흐름을 확인해 보세요.">
+  <meta name="theme-color" content="#F7F4EE">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="demo.css">
+
+  <!-- og:start -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="윤성조 포트폴리오">
+  <meta property="og:title" content="인플루언서 제안 자동화 체험형 데모 | 윤성조">
+  <meta property="og:description" content="버튼을 눌러 1단계부터 5단계까지 진행하며 AI 도구가 후보를 발굴하고 적격성을 판정하여 맞춤 제안을 생성하는 전체 흐름을 확인해 보세요.">
+  <meta property="og:url" content="https://seongjoyoun.github.io/portfolio/demos/influencer/">
+  <meta property="og:image" content="https://seongjoyoun.github.io/portfolio/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- og:end -->
+</head>
+<body>
+
+  <!-- 상단 가상 데이터 안내 띠 -->
+  <aside class="demo-top-banner" aria-label="데모 안내">
+    <div class="container demo-top-banner-inner">
+      <div class="demo-top-banner-text">
+        <span>실제 실행 결과를 가상 데이터로 재생합니다. 이름·연락처는 가상입니다.</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 공통 헤더 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../" class="site-logo">윤성조</a>
+      <nav class="site-nav" aria-label="사이트 메뉴">
+        <a href="../../cases/influencer/">케이스로 돌아가기</a>
+        <a href="../../">메인 홈</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 데모 메인 본문 -->
+  <main class="demo-page">
+    <div class="container">
+      
+      <!-- 데모 인트로 -->
+      <header class="demo-intro">
+        <div class="demo-badge-wrap">
+          <span class="badge badge-prototype">체험형 데모</span>
+        </div>
+        <h1 class="demo-page-title">인플루언서 제안 자동화 프로세스</h1>
+        <p class="demo-page-lead">
+          버튼을 눌러 1단계부터 5단계까지 진행하며 AI 도구가 후보를 발굴하고 적격성을 판정하여 맞춤 제안을 생성하는 전체 흐름을 확인해 보세요.
+        </p>
+      </header>
+
+      <!-- 단계 표시 (1 발굴 · 2 점수 · 3 제안 초안 · 4 회신 분류 · 5 보고) -->
+      <nav class="demo-stepper-nav" aria-label="데모 단계 네비게이션">
+        <ol class="demo-stepper-list">
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="1" id="step-tab-1" aria-current="step">
+              <span class="demo-step-num">1</span>
+              <span class="demo-step-name">발굴</span>
+            </button>
+          </li>
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="2" id="step-tab-2">
+              <span class="demo-step-num">2</span>
+              <span class="demo-step-name">점수</span>
+            </button>
+          </li>
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="3" id="step-tab-3">
+              <span class="demo-step-num">3</span>
+              <span class="demo-step-name">제안 초안</span>
+            </button>
+          </li>
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="4" id="step-tab-4" disabled>
+              <span class="demo-step-num">4</span>
+              <span class="demo-step-name">회신 분류</span>
+            </button>
+          </li>
+          <li class="demo-step-tab">
+            <button type="button" class="demo-step-btn" data-step="5" id="step-tab-5" disabled>
+              <span class="demo-step-num">5</span>
+              <span class="demo-step-name">보고</span>
+            </button>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- 로딩 및 에러 안내 컨테이너 -->
+      <div id="demo-status-container" role="status" aria-live="polite">
+        <div class="demo-status-banner">데모 데이터를 불러오는 중입니다...</div>
+      </div>
+
+      <!-- 단계별 화면 컨테이너 -->
+      <div id="demo-content-area" style="display: none;">
+
+        <!-- 1단계: 발굴 -->
+        <section class="demo-step-view is-active" id="step-view-1" aria-labelledby="step-1-title">
+          <header class="step-header">
+            <div class="step-header-tag">1단계 · 후보 발굴</div>
+            <h2 class="step-header-title" id="step-1-title">해시태그 기반 타깃 후보 발굴 및 구매 댓글 수집</h2>
+            <p class="step-header-desc">
+              해시태그를 기준으로 관련 콘텐츠를 탐색하고, 구매 의도가 있는 댓글이 달린 후보 계정을 자동으로 수집합니다.
+            </p>
+          </header>
+
+          <div class="criteria-bar" id="step-1-criteria">
+            <!-- JS 동적 렌더링: 브랜드, 제품, 해시태그 -->
+          </div>
+
+          <div class="candidate-grid" id="step-1-candidates">
+            <!-- JS 동적 렌더링: 후보 3명 카드 -->
+          </div>
+        </section>
+
+        <!-- 2단계: 점수 -->
+        <section class="demo-step-view" id="step-view-2" aria-labelledby="step-2-title">
+          <header class="step-header">
+            <div class="step-header-tag">2단계 · 적격 점수</div>
+            <h2 class="step-header-title" id="step-2-title">가중치 기반 자동 채점 및 적격/탈락 판정</h2>
+            <p class="step-header-desc">
+              진성 구매 댓글, 피부 고민 일치도, 연락처·공구 이력 가중치와 경쟁사 배제 규칙을 종합해 적격 여부를 자동 판정합니다.
+            </p>
+          </header>
+
+          <div class="candidate-grid" id="step-2-candidates">
+            <!-- JS 동적 렌더링: 후보별 점수 막대 3개 + 합계 + 판정 배지 + 사유 -->
+          </div>
+        </section>
+
+        <!-- 3단계: 제안 초안 -->
+        <section class="demo-step-view" id="step-view-3" aria-labelledby="step-3-title">
+          <header class="step-header">
+            <div class="step-header-tag">3단계 · 제안 초안</div>
+            <h2 class="step-header-title" id="step-3-title">개인화 제안 메일 및 DM 알림 초안 작성</h2>
+            <p class="step-header-desc">
+              적격 인플루언서의 콘텐츠 맥락과 팔로워 댓글 반응을 반영한 맞춤 제안을 생성하며, 발송은 반드시 담당자의 최종 승인을 거칩니다.
+            </p>
+          </header>
+
+          <div class="proposal-layout">
+            <!-- 메일 미리보기 -->
+            <div class="mail-preview-card" id="step-3-mail-preview">
+              <!-- JS 동적 렌더링 -->
+            </div>
+
+            <!-- 사이드 컬럼: DM 미리보기 및 발송 승인 버튼 -->
+            <div class="proposal-side-col">
+              <div class="dm-preview-card" id="step-3-dm-preview">
+                <!-- JS 동적 렌더링 -->
+              </div>
+
+              <div class="approval-card">
+                <div class="approval-card-title">제안서 발송 승인</div>
+                <p class="approval-card-desc">
+                  안전 원칙에 따라 사람이 직접 제안 초안을 확인한 후 승인해야 다음 단계로 진행됩니다.
+                </p>
+                <div id="approval-btn-container">
+                  <button type="button" class="btn btn-primary" id="btn-approve">발송 승인</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4단계: 회신 분류 -->
+        <section class="demo-step-view" id="step-view-4" aria-labelledby="step-4-title">
+          <header class="step-header">
+            <div class="step-header-tag">4단계 · 회신 분류</div>
+            <h2 class="step-header-title" id="step-4-title">인플루언서 회신 내용 자동 분석 및 후속 업무 연계</h2>
+            <p class="step-header-desc">
+              수신된 회신 본문을 분석해 수락과 문의 유형으로 자동 분류하고, 그에 맞는 후속 절차(출고 대기 또는 담당자 답변)로 연결합니다.
+            </p>
+          </header>
+
+          <div class="reply-grid" id="step-4-replies">
+            <!-- JS 동적 렌더링: 회신 2건 카드 + 탈락 후보 안내 -->
+          </div>
+        </section>
+
+        <!-- 5단계: 보고 -->
+        <section class="demo-step-view" id="step-view-5" aria-labelledby="step-5-title">
+          <header class="step-header">
+            <div class="step-header-tag">5단계 · 성과 보고</div>
+            <h2 class="step-header-title" id="step-5-title">퍼널 분석 요약 및 안전 운영 규칙 준수 현황</h2>
+            <p class="step-header-desc">
+              발굴부터 출고까지 단계별 전환 성과를 퍼널로 집계하고, 안전하고 신뢰할 수 있는 협업을 위한 4대 운영 규칙을 점검합니다.
+            </p>
+          </header>
+
+          <!-- 퍼널 차트 -->
+          <div class="report-funnel-card">
+            <div class="funnel-card-title">
+              <span>제안 진행 파이프라인 퍼널</span>
+              <span class="badge badge-prototype">총 5단계</span>
+            </div>
+            <div class="funnel-list" id="step-5-funnel">
+              <!-- JS 동적 렌더링 -->
+            </div>
+          </div>
+
+          <!-- 주요 전환율 3개 -->
+          <div class="report-rates-grid" id="step-5-rates">
+            <!-- JS 동적 렌더링 -->
+          </div>
+
+          <!-- 안전 규칙 4개 -->
+          <div class="rules-card">
+            <div class="rules-card-title">자동화 운영 안전 규칙 (4원칙)</div>
+            <ul class="rules-list" id="step-5-rules">
+              <!-- JS 동적 렌더링 -->
+            </ul>
+          </div>
+        </section>
+
+      </div><!-- /demo-content-area -->
+
+      <!-- 하단 네비게이션 컨트롤 -->
+      <footer class="demo-bottom-nav">
+        <div class="demo-nav-info" id="demo-nav-hint" role="status" aria-live="polite">
+          <!-- 승인 안내 또는 진행 상황 힌트 -->
+        </div>
+        <div class="demo-nav-btns">
+          <button type="button" class="btn btn-secondary" id="btn-prev" disabled>&larr; 이전 단계</button>
+          <button type="button" class="btn btn-primary" id="btn-next">다음 단계 &rarr;</button>
+          <button type="button" class="btn btn-secondary" id="btn-restart" style="display: none;">처음부터 다시 보기</button>
+          <a href="../../cases/influencer/" class="btn btn-primary" id="btn-case-return" style="display: none;">케이스로 돌아가기 &rarr;</a>
+        </div>
+      </footer>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2026 윤성조.</div>
+      <div class="footer-contact">연락처: <strong><a href="mailto:ganziskin@gmail.com">ganziskin@gmail.com</a></strong></div>
+    </div>
+  </footer>
+
+  <script src="demo.js" defer></script>
+</body>
+</html>
