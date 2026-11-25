@@ -37,3 +37,11 @@
 | T10 | — | AI 장식 이미지 | M2 | ⛔ 하지 않음 (오너 결정 2026-11-25: Flow 한국 계정 워터마크·arena.ai 상업 이용 금지, 실제 작업 화면으로 충분) |
 | T11 | G | 웹 공개용 포트폴리오 PDF 원판(인쇄 HTML) → C가 PDF 출력 | M2 | ✅ 통과 (왕복 1회, A4 2쪽 158KB, 사이트 주소는 배포 후 채움) |
 | T12 | C | 최종 검수 → 오너 승인 → GitHub Pages 배포 | 전부 | ✅ 배포 (2026-11-25) https://seongjoyoun.github.io/portfolio/ — 개인정보·비밀값 검사, 링크 112개 깨짐 0, 배포 워크플로 2회 수정(액션 버전·작업 분리) 후 성공 |
+
+## 배포 이후
+
+| 날짜 | 담당 | 작업 | 결과 |
+|---|---|---|---|
+| 2026-11-25 | C+O | 오너 PC 망에서 github.io 연결이 끊김(TLS 연결 리셋, github.io 전체) → Vercel 예비 배포 | 대표 주소 https://seongjoyoun-portfolio.vercel.app (arkysj-arch/portfolio 복사본 연결, 공개), github.io는 예비 |
+| 2026-11-25 | C | 메인 주소 끝 `/` 누락 시 보정, 대표 주소 교체(공유 태그·PDF·404·README), `git push` 한 번에 두 저장소 반영 | ✅ |
+
