@@ -237,6 +237,11 @@
   width: 100%;
 }
 
+.video-player-wrap--wide {
+  max-width: 720px;
+  margin-top: 2.5rem;
+}
+
 .shortform-video {
   width: 100%;
   max-width: 360px;
@@ -246,6 +251,11 @@
   border: 1px solid var(--color-border);
   background-color: #000000;
   display: block;
+}
+
+.shortform-video--wide {
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
 }
 
 .video-caption {
@@ -302,6 +312,11 @@
   }
 
   .shortform-video {
+    max-width: 100%;
+  }
+
+  .video-player-wrap--wide,
+  .shortform-video--wide {
     max-width: 100%;
   }
 
