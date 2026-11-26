@@ -77,6 +77,13 @@
   - AI에게 시킨 것: Claude(상세페이지·브랜드 조사, 장면표 6컷, 이미지·영상·음악 문안, 브라우저 조작, 기준 사진 대조, 프레임 검수, FFmpeg 편집), Nano Banana 2.1(기준 사진, 후보 12장 → 6장 채택, 1장은 Nano Banana Pro), Google Flow Omni 1.2 Flash(10초 영상 2편 + 4초 재시도 1편, 참조 이미지 방식), Flow Music(20초 연주곡)
   - 결과(실측): 16:9 1920x1080, 20.0초, 24fps / Flow 영상 72크레딧(화면 표시값, 이미지 0크레딧) / 생성 원본 720p → Flow 1080p 업스케일
   - 한계: 4번 컷 캡이 실제(누르는 원판형 프레스 캡)와 달리 경첩 뚜껑으로 나옴(재생성 1회로도 해결 안 됨), 라벨의 작은 문구는 AI가 정확히 그리지 못함, Flow 워터마크 유지, 업로드 전이라 성과 지표 없음
+  - 사용 도구(캡션용): Claude, Nano Banana 2.1·Pro, Google Flow(Omni 1.2 Flash), Flow Music, FFmpeg
+- [확인] 첫 번째 영상(메디큐브) 사용 도구(캡션용): Claude, Google Flow 이미지·영상, FFmpeg — 위 메디큐브 항목의 "AI에게 시킨 것"에서
+- [확인] **세 번째 영상: EVENING GLOW 튜브 제품 광고 (오너 제공, 2026-11-26)** — 원본 `Downloads/ea09f330-002d-4ce0-80ca-81ab5d618631.mp4`
+  - 오너 진술: **안티그래비티(Antigravity)로 자동 생성·편집**한 영상
+  - 실측: 16:9 1280x720, 20.0초, 24fps, 음악 포함, 약 6.0MB. 사이트 사본 `site/assets/video/shortform/evening_glow_antigravity.mp4`, 포스터 `evening-glow-poster.webp`
+  - 화면 확인(1초 간격 프레임): 제품 단독 → 장미 꽃잎·라즈베리 원료 접사 → 손등에 짜서 펴 바르기 → 모델 컷 → 제품 마무리 컷
+  - [미확인] 안티그래비티 안에서 쓴 세부 모델명, 제작 시간·비용, 제품이 실존 브랜드인지
 
 ## 5. 이 사이트 자체 (오케스트레이션 사례)
 

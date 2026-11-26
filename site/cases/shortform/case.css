@@ -267,6 +267,9 @@
   line-height: 1.5;
 }
 
+.video-tools { font-size: 0.85rem; color: var(--color-muted); text-align: center; margin: 0.35rem 0 0; line-height: 1.5; }
+.video-tools strong { color: var(--color-text); font-weight: 700; margin-right: 0.35rem; }
+
 /* 5단: 버튼 그룹 */
 .btn-group {
   display: flex;
